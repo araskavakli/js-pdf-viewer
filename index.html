@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/pdfobject@2.2.8/pdfobject.min.js"></script>
+</head>
+<style>
+    /*
+    PDFObject appends the classname "pdfobject-container" to the target element.
+    This enables you to style the element differently depending on whether the embed was successful.
+    In this example, a successful embed will result in a large box.
+    A failed embed will not have dimensions specified, so you don't see an oddly large empty box.
+    */
+
+    .pdfobject-container {
+        width: 100%;
+        max-width: 600px;
+        height: 600px;
+        margin: 2em 0;
+    }
+
+    .pdfobject {
+        border: solid 1px #666;
+    }
+
+    #results {
+        padding: 1rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .success {
+        color: #4F8A10;
+        background-color: #DFF2BF;
+    }
+
+    .fail {
+        color: #D8000C;
+        background-color: #FFBABA;
+    }
+</style>
+
+<body>
+    <h1>PDFObject Example: Invoking conditional JavaScript upon successful embed (onclick)</h1>
+    <p><a href="#" class="embed-link">Click this link to embed the PDF.</a></p>
+    <div id="pdf"></div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
